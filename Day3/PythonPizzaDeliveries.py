@@ -36,7 +36,7 @@ if extra_cheese == "Y":
     
 
 else:
-    print(f'price of of pizza is {size_price}') 
+    print('You have entered incorrect value for the pizza') 
 
 final_bill=size_price + pepperoni_prize + extra_cheese_prize
 print(type(final_bill))

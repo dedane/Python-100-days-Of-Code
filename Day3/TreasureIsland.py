@@ -33,9 +33,9 @@ print ('''
                             \_____/     
 ''')
 
-print('Welcome to explore Africa with Kimathi')
+print('Welcome to explore Nairobi with Kimathi')
 
-print('Your Mission is to Survive without being broke the capital city');
+print('Your Mission is to Survive Nairobi without being broke the capital city');
 
 transport = input('What means of transportation will you be utlizing : Taxi or Uber? ')
 

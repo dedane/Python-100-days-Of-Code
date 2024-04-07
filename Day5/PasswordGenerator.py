@@ -10,7 +10,7 @@ nr_symbols = int(input(f"How many symbols would you like?\n"))
 nr_numbers = int(input(f"How many numbers would you like?\n"))
 
 #Easy Password Generator
-password = ''
+password = []
 
 for char in range(1, nr_letters+1):
     password += random.choice(letters)
@@ -21,6 +21,8 @@ for char in range(1, nr_symbols+1):
 for char in range(1, nr_numbers +1):
     password += random.choice(numbers)
 
-print(f'your password is: {password}')
+final_password = random.shuffle(password)
+
+print(f'your password is: {final_password}')
 
 #Hard Password Generator

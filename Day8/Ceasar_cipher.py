@@ -1,4 +1,4 @@
-alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
 text = input("Type your message:\n").lower()
@@ -31,9 +31,17 @@ def decrypt(text,shift):
     ##🐛Bug alert: What happens if you try to encode the word 'civilization'?🐛
 
 #TODO-3: Call the encrypt function and pass in the user inputs. You should be able to test the code and encrypt a message. 
+def ceasar(text,shift):
+    if direction == 'encode':
+       indices = [alphabet.index(letter) + 1 + shift for letter in text if letter in alphabet]
+       letters = ''.join(alphabet[index -1] for index in indices)
+       print(f'The new encoded text is {letters}') 
+    elif direction == 'decode':
+        indices = [alphabet.index(letter) + 1 - shift for letter in text if letter in alphabet]
+        letters = ''.join(alphabet[index -1] for index in indices)
+        print(f'The new encoded text is {letters}')
+    else:
+        print('your function is not available')
 
 
-if direction == 'encode':
-    encrypt(text,shift)
-elif direction == 'decode':
-    decrypt(text,shift)
+ceasar(text,shift)

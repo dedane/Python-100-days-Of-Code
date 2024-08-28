@@ -2,7 +2,8 @@
 #Finally click "Run" to execute the tests
 
 def paint_calc(height,width,cover):
-    print(round((height*width)/coverage))
+    num_of_cans = round((height*width)/coverage)
+    print('You will need {num_of_cans} to paint the whole wall')
 
 
 

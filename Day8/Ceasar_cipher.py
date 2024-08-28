@@ -33,13 +33,9 @@ def decrypt(text,shift):
 #TODO-3: Call the encrypt function and pass in the user inputs. You should be able to test the code and encrypt a message. 
 def ceasar(text,shift):
     if direction == 'encode':
-       indices = [alphabet.index(letter) + 1 + shift for letter in text if letter in alphabet]
-       letters = ''.join(alphabet[index -1] for index in indices)
-       print(f'The new encoded text is {letters}') 
+       encrypt(text,shift)
     elif direction == 'decode':
-        indices = [alphabet.index(letter) + 1 - shift for letter in text if letter in alphabet]
-        letters = ''.join(alphabet[index -1] for index in indices)
-        print(f'The new encoded text is {letters}')
+        decrypt(text,shift)
     else:
         print('your function is not available')
 
